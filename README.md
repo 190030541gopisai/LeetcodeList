@@ -13,6 +13,7 @@ This repository contains the list with topic wise problems list
 - [283. Move Zeroes](https://leetcode.com/problems/move-zeroes/) (Easy)
 - [75. Sort Colors](https://leetcode.com/problems/sort-colors/)  (Medium)  
 ###### ``Two Pointers - Sorting`` 
+- [1574. Shortest Subarray to be Removed to Make Array Sorted](https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/) (Medium)
 - [1498. Number of Subsequences That Satisfy the Given Sum Condition](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/) (Medium)
 - [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) (Easy)
 - [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) (Easy)
