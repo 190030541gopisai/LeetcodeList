@@ -30,3 +30,8 @@ This repository contains the list with topic wise problems list
 - [713. Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) (Medium)
 - [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) (Medium)
 - [30. Substring with Concatenation of All Words]() (Hard)
+
+#### [Binary Tree](https://leetcode.com/tag/binary-tree/)
+
+###### ``Binary Tree - Path``
+- [1457. Pseudo-Palindromic Paths in a Binary Tree](https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/) (Medium)
