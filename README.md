@@ -35,3 +35,8 @@ This repository contains the list with topic wise problems list
 
 ###### ``Binary Tree - Path``
 - [1457. Pseudo-Palindromic Paths in a Binary Tree](https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/) (Medium)
+
+
+#### [Dynamic Programming](https://leetcode.com/tag/dynamic-programming/)
+###### ``2D - DP``
+- [1770. Maximum Score from Performing Multiplication Operations](https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations/)
