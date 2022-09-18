@@ -31,7 +31,7 @@ This repository contains the list with topic wise problems list
 - [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) (Medium)
 - [30. Substring with Concatenation of All Words]() (Hard)
 
-#### [Binary Tree](https://leetcode.com/tag/stack/)
+#### [Stack](https://leetcode.com/tag/stack/)
 - [Nearest Smaller Element](https://www.interviewbit.com/problems/nearest-smaller-element/) 
 
 
