@@ -33,6 +33,7 @@ This repository contains the list with topic wise problems list
 
 #### [Stack](https://leetcode.com/tag/stack/)
 - [Nearest Smaller Element](https://www.interviewbit.com/problems/nearest-smaller-element/) 
+- [84. Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
 
 
 #### [Binary Tree](https://leetcode.com/tag/binary-tree/)
