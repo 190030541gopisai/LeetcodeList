@@ -32,6 +32,10 @@ This repository contains the list with topic wise problems list
 - [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) (Medium)
 - [30. Substring with Concatenation of All Words]() (Hard)
 
+# [String](https://leetcode.com/tag/string/)
+###### ``String Matching``
+- [1392. Longest Happy Prefix ( KMP & Rolling Hash)](https://leetcode.com/problems/longest-happy-prefix/)
+
 # [Stack](https://leetcode.com/tag/stack/)
 ###### ``Basic``
 - [Nearest Smaller Element](https://www.interviewbit.com/problems/nearest-smaller-element/) 
