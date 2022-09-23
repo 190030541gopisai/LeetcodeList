@@ -2,7 +2,7 @@
 This repository contains the list with topic wise problems list
 
 
-#### [Two Pointers](https://leetcode.com/tag/two-pointers/)
+# [Two Pointers](https://leetcode.com/tag/two-pointers/)
 ###### ``Two sum Variants`` 
 - [15. 3Sum](https://leetcode.com/problems/3sum)  (Medium) 
 - [16. 3Sum Closest](https://leetcode.com/problems/3sum-closest/) (Medium) 
@@ -31,22 +31,26 @@ This repository contains the list with topic wise problems list
 - [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) (Medium)
 - [30. Substring with Concatenation of All Words]() (Hard)
 
-#### [Stack](https://leetcode.com/tag/stack/)
+# [Stack](https://leetcode.com/tag/stack/)
 ###### ``Basic``
 - [Nearest Smaller Element](https://www.interviewbit.com/problems/nearest-smaller-element/) 
 - [84. Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
 
+# [Bit Manipulation](https://leetcode.com/tag/bit-manipulation/)
+###### ``Basic``
+- [1680. Concatenation of Consecutive Binary Numbers](https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/)
 
-#### [Binary Tree](https://leetcode.com/tag/binary-tree/)
+
+# [Binary Tree](https://leetcode.com/tag/binary-tree/)
 
 ###### ``Binary Tree - Path``
 - [1457. Pseudo-Palindromic Paths in a Binary Tree](https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/) (Medium)
 
-#### [Greedy](https://leetcode.com/tag/greedy/)
+# [Greedy](https://leetcode.com/tag/greedy/)
 ###### ``Basic``
 - [1798. Maximum Number of Consecutive Values You Can Make](https://leetcode.com/problems/maximum-number-of-consecutive-values-you-can-make/)
 
-#### [Dynamic Programming](https://leetcode.com/tag/dynamic-programming/)
+# [Dynamic Programming](https://leetcode.com/tag/dynamic-programming/)
 ###### ``DP + Sliding Window``
 - [1687. Delivering Boxes from Storage to Ports](https://leetcode.com/problems/delivering-boxes-from-storage-to-ports/) (Hard)
 ###### ``2D - DP``
