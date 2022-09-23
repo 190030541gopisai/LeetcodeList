@@ -53,6 +53,8 @@ This repository contains the list with topic wise problems list
 - [2007. Find Original Array From Doubled Array](https://leetcode.com/problems/find-original-array-from-doubled-array/)
 
 # [Dynamic Programming](https://leetcode.com/tag/dynamic-programming/)
+###### ``Basic``
+- [718. Maximum Length of Repeated Subarray (Longest Common Substring)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
 ###### ``DP + Sliding Window``
 - [1687. Delivering Boxes from Storage to Ports](https://leetcode.com/problems/delivering-boxes-from-storage-to-ports/) (Hard)
 ###### ``2D - DP``
