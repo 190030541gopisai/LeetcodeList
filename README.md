@@ -60,6 +60,7 @@ This repository contains the list with topic wise problems list
 ###### ``DP + String``
 - [718. Maximum Length of Repeated Subarray (Longest Common Substring)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
 - [516. Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)
+- [1048. Longest String Chain (Longest Increasing Subsequence)](https://leetcode.com/problems/longest-string-chain/)
 ###### ``DP + Sliding Window``
 - [1687. Delivering Boxes from Storage to Ports](https://leetcode.com/problems/delivering-boxes-from-storage-to-ports/) (Hard)
 ###### ``2D - DP``
