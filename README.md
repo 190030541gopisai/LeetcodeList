@@ -4,11 +4,12 @@ This repository contains the list with topic wise problems list
 
 # [Two Pointers](https://leetcode.com/tag/two-pointers/)
 ###### ``Two sum Variants`` 
-- [15. 3Sum](https://leetcode.com/problems/3sum)  (Medium) 
-- [16. 3Sum Closest](https://leetcode.com/problems/3sum-closest/) (Medium) 
-- [18. 4Sum](https://leetcode.com/problems/4sum/) (Medium) 
-- [918 · 3Sum Smaller](https://www.lintcode.com/problem/918/description) (Medium) 
-- [923. 3Sum With Multiplicity](https://leetcode.com/problems/3sum-with-multiplicity/) (Medium) 
+- [15. 3Sum](https://leetcode.com/problems/3sum)  
+- [16. 3Sum Closest](https://leetcode.com/problems/3sum-closest/) 
+- [18. 4Sum](https://leetcode.com/problems/4sum/) 
+- [918 · 3Sum Smaller](https://www.lintcode.com/problem/918/description) 
+- [923. 3Sum With Multiplicity](https://leetcode.com/problems/3sum-with-multiplicity/) 
+- [532. K-diff Pairs in an Array](https://leetcode.com/problems/k-diff-pairs-in-an-array/)
 ###### ``Dutch National Flag Algorithm``
 - [283. Move Zeroes](https://leetcode.com/problems/move-zeroes/) (Easy)
 - [75. Sort Colors](https://leetcode.com/problems/sort-colors/)  (Medium)  
