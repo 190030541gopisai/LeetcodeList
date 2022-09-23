@@ -57,7 +57,7 @@ This repository contains the list with topic wise problems list
 - [2007. Find Original Array From Doubled Array](https://leetcode.com/problems/find-original-array-from-doubled-array/)
 
 # [Dynamic Programming](https://leetcode.com/tag/dynamic-programming/)
-###### ``String``
+###### ``DP + String``
 - [718. Maximum Length of Repeated Subarray (Longest Common Substring)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
 - [516. Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)
 ###### ``DP + Sliding Window``
