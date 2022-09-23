@@ -47,7 +47,8 @@ This repository contains the list with topic wise problems list
 
 
 # [Binary Tree](https://leetcode.com/tag/binary-tree/)
-
+###### ``Binary Tree - String``
+- [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
 ###### ``Binary Tree - Path``
 - [1457. Pseudo-Palindromic Paths in a Binary Tree](https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/) (Medium)
 
