@@ -49,6 +49,7 @@ This repository contains the list with topic wise problems list
 # [Greedy](https://leetcode.com/tag/greedy/)
 ###### ``Basic``
 - [1798. Maximum Number of Consecutive Values You Can Make](https://leetcode.com/problems/maximum-number-of-consecutive-values-you-can-make/)
+- [2007. Find Original Array From Doubled Array](https://leetcode.com/problems/find-original-array-from-doubled-array/)
 
 # [Dynamic Programming](https://leetcode.com/tag/dynamic-programming/)
 ###### ``DP + Sliding Window``
