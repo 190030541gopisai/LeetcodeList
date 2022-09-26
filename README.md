@@ -68,6 +68,10 @@ This repository contains the list with topic wise problems list
 ###### ``2D - DP``
 - [1770. Maximum Score from Performing Multiplication Operations](https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations/)
 
+# [Graph](https://leetcode.com/tag/graph/)
+#### ``Union Find``
+- [990. Satisfiability of Equality Equations](https://leetcode.com/problems/satisfiability-of-equality-equations/)
+
 # [Trie](https://leetcode.com/tag/trie/)
 ###### ``Basic``
 - [208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
