@@ -1,0 +1,138 @@
+//{ Driver Code Starts
+#include<bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+class Solution
+{
+public:
+    bool bfs(int source,int sink, int **gr, int *parent, int N){
+        bool visited[N];
+        memset(visited, 0, sizeof(visited));
+
+        queue<int> q;
+
+        q.push(source);
+        visited[source] = true;
+        parent[source] = source;
+
+        while(!q.empty()){
+            int u = q.front();
+            q.pop();
+
+            for(int v = 1; v < N; v++){
+                if(!visited[v] && gr[u][v] > 0){
+                    visited[v] = true;
+                    parent[v] = u;
+                    q.push(v);
+
+                    if(v == sink){
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+    int findMaxFlow(int N,int M,vector<vector<int>> Edges)
+    {
+        // code here
+        int mxflow = 0;
+        int source = 1, sink = N;
+        
+        N+=1;
+
+        int **rGraph = new int*[N];
+        for(int i = 0; i < N; i++){
+            rGraph[i] = new int[N];
+        }
+
+        for(int i = 0; i < N; i++){
+            for(int j = 0; j < N; j++){
+                rGraph[i][j] = 0;
+            }
+        }
+
+        for(int i = 0; i < M; i++){
+            int u,v,cost;
+            u = Edges[i][0];
+            v = Edges[i][1];
+            cost = Edges[i][2];
+
+            rGraph[u][v] += cost;
+            // rGraph[v][u] += cost;
+        }
+
+        for(int i = 1; i < N; i++){
+            for(int j = 1; j < N; j++){
+                cout << rGraph[i][j] << " ";
+            }
+            cout << endl;
+        }
+
+        cout << "===============" << endl;
+
+
+        int *parent = new int[N];
+
+        for(int i = 0; i < N; i++){
+            parent[i] = 0;
+        }
+
+        while(bfs(source, sink, rGraph, parent, N) == true){
+            int flow = INT_MAX;
+
+            int u = 0, v = sink;
+            while(v != source){
+                u = parent[v];
+                flow = min(flow, rGraph[u][v]);
+                v = u;
+            }
+
+            mxflow += flow;
+
+            v = sink;
+            while(v != source){
+                u = parent[v];
+                rGraph[u][v] -= flow;
+                rGraph[v][u] += flow;
+                v = u;
+            }
+
+        }
+
+        for(int i = 1; i < N; i++){
+            for(int j = 1; j < N; j++){
+                cout << rGraph[i][j] << " ";
+            }
+            cout << endl;
+        }
+
+        delete[] parent;
+        delete[] rGraph;
+        return mxflow;
+    }
+};
+
+//{ Driver Code Starts.
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+        int i,j,N,M,u,v,w;
+        int res;
+        scanf("%d %d",&N,&M);
+        vector<vector<int>> Edges; 
+        for(i=0;i<M;i++)
+        {
+            scanf("%d %d %d",&u,&v,&w);
+        	Edges.push_back({u,v,w});
+    	}
+        Solution obj;
+        res = obj.findMaxFlow(N, M, Edges);
+        cout<<res<<endl;
+    }
+    return 0;
+}
+// } Driver Code Ends

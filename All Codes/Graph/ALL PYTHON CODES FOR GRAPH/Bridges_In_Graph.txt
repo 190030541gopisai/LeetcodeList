@@ -1,0 +1,77 @@
+import sys 
+from math import inf,isinf 
+from collections import defaultdict,Counter,OrderedDict
+from sortedcontainers import SortedSet,SortedList,SortedDict
+sys.setrecursionlimit(100000)
+
+class Graph:
+	def __init__(self,V=0):
+		self.V = V 
+		self.adj = defaultdict(list)
+		# self.adj = [[] for i in range(V)]
+
+	def addEdge(self,u,v):
+		self.adj[u].append(v)
+		self.adj[v].append(u)
+#---------------------------------------
+brides = []
+# low time nodes
+low = defaultdict(int)
+# discovery nodes time
+disc = defaultdict(int)
+
+def dfs(cur,par,timer,adj,visited):
+	global disc,low
+
+	disc[cur] = low[cur] = timer
+	visited[cur] = True 
+
+	for child in adj[cur]:
+		#not visited
+		if(not visited[child]):
+			dfs(child,cur,timer + 1, adj,visited)
+			low[cur] = min(low[cur],low[child])
+			# bridge found
+			if(low[child] > disc[cur]):
+				brides.append((cur,child))
+		elif(child != par):
+			low[cur] = min(low[cur],disc[child])
+#---------------------------------------
+def main():
+	g = Graph()
+	g.addEdge(1,3)
+	g.addEdge(1,5)
+	g.addEdge(1,6)
+	g.addEdge(1,9)
+	g.addEdge(3,5)
+	g.addEdge(3,7)
+	g.addEdge(3,6)
+	g.addEdge(3,8)
+	g.addEdge(9,12)
+	g.addEdge(9,11)
+	g.addEdge(5,7)
+	g.addEdge(6,2)
+	g.addEdge(12,11)
+	g.addEdge(2,8)
+	g.addEdge(2,4)
+	g.addEdge(4,10)
+
+	dfs(cur = 1,par = 1,timer = 0,adj = g.adj,visited = defaultdict(int))
+
+	print("========= Bridges ==========")
+	print(brides)
+	
+	# # Graph 2
+	# g = Graph()
+	# g.addEdge('A','B')
+	# g.addEdge('A','C')
+	# # g.addEdge('B','C')
+
+	# dfs(cur = 'A',par = 'A',timer = 0,adj = g.adj,visited = defaultdict(int))
+	# print("========= Bridges ==========")
+	# print(brides)
+
+
+
+if __name__ == '__main__':
+	main()

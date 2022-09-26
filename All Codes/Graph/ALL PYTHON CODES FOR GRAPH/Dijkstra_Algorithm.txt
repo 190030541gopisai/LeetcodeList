@@ -1,0 +1,72 @@
+from collections import defaultdict
+from heapq import heappush,heappop
+import sys
+
+class Graph:
+	def __init__(self, V):
+		self.V = V 
+		self.adj = defaultdict(list)
+
+	def addEdge(self,u,v,w):
+		self.adj[u].append((v,w))
+		self.adj[v].append((u,w))
+
+	def dijkstra_algorithm(self,src):
+		
+		#distance to store the  single source shortest path
+		distance = defaultdict(int)
+		parent = defaultdict(str)
+
+		#initializing the distance with infinity and parent with "-1"
+		for key in self.adj.keys():
+			distance[key] = sys.maxsize
+			parent[key] = "-1"
+
+		distance[src] = 0
+		Q = [(0,src)] # dist,node
+
+
+		while(Q):
+			prevdist,prevnode = heappop(Q)
+			
+			for v,curdist in self.adj[prevnode]:
+				if( prevdist + curdist < distance[v]):
+					distance[v] = prevdist + curdist
+					parent[v] = str(prevnode)
+					heappush(Q, (distance[v], v))
+		
+		for key in self.adj.keys():
+			print(key, " distance from src ", distance[key])
+			# printing path
+			print("====================== Path from key to src ======================")
+			temp = key 
+			while(temp != src):
+				print(temp, end = " <- ")
+				temp = parent[temp]
+			print(src,end="\n\n")
+
+
+
+
+
+def main():
+	g = Graph(6)
+	g.addEdge('Amitra','Jaipur',4)
+	g.addEdge('Amitra','Delhi',1)
+	g.addEdge('Jaipur','Delhi',2)
+	g.addEdge('Mumbai','Jaipur',8)
+	g.addEdge('Mumbai','Bhopal',3)
+	g.addEdge('Bhopal','Agra',2)
+	g.addEdge('Delhi','Agra',1)
+
+	g.dijkstra_algorithm('Amitra')
+if __name__ == '__main__':
+	main()
+
+
+
+
+
+
+
+

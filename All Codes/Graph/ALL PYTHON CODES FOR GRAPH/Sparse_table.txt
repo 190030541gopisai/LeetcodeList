@@ -1,0 +1,58 @@
+from math import log2,ceil,floor
+import sys 
+from math import inf,isinf 
+from collections import defaultdict,Counter,OrderedDict
+from sortedcontainers import SortedSet,SortedList,SortedDict
+sys.setrecursionlimit(100000)
+class SparseTable:
+	def __init__(self,N):
+		self.N = N 
+		self.row = N 
+		self.col = ceil(log2(N))
+		InitialIndex = 0
+		self.mat = [[InitialIndex] * self.col for i in range(self.row)]
+		self.bin_log = [0] * (N+1)
+		for i in range(1,N+1):
+			self.bin_log[i] = self.bin_log[i//2] + 1 
+
+	def buildTable(self,arr,N):
+		FirstColumn = 0
+		for i in range(N):
+		 	self.mat[i][FirstColumn] = arr[i]
+
+		for j in range(1,self.col):
+			i = 0
+			while( i + (1<<j)-1 < N):
+				prevCol = j-1
+				nextRow = i + (1<<(j-1))
+				self.mat[i][j] = min(self.mat[i][prevCol], self.mat[nextRow][prevCol])
+				i+=1
+
+	def query(self,L,R):
+		if(L < 0 or R < 0 or R>=self.N or L>=self.N):
+			return sys.maxsize
+		length = R - L + 1
+		k = floor(log2(length))
+		return min(self.mat[L][k],self.mat[R - (1<<k) + 1][k])
+
+
+
+def main():
+	arr = [4,3,1,2,3,4,7,8]
+	stable = SparseTable(len(arr))
+	stable.buildTable(arr,len(arr))
+	ans = stable.query(6,7)
+	print(ans)
+if __name__ == '__main__':
+	main()
+
+
+
+
+
+
+
+
+
+
+

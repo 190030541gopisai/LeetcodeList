@@ -1,0 +1,32 @@
+from typing import List
+def bfs(V:int, adjMat:List[List[int]], startVertex:int):
+	ans = []
+	q = [startVertex]
+	visited = [False]*V
+	visited[startVertex] = True 
+	while(q):
+		vertex = q.pop(0)
+		ans.append(vertex)
+		for j in range(V):
+			if(adjMat[vertex][j] == 1):
+				if(not visited[j]):
+					visited[j] = True
+					q.append(j)
+	return ans
+
+def main():
+	n = int(input("Enter No of Nodes = "))
+	e = int(input("Enter No of Edges = ")) 
+	mat = [[0]*n for i in range(n)]
+	print("===========Enter the edges in key value pair===========")
+	for i in range(e):
+		first,second = list(map(int,input().split()))
+		#unidirection
+		mat[first][second] = 1
+		#bidirectional
+		mat[second][first] = 1
+	lst = bfs(n,mat,0) #starting vertex is 0
+	print(*lst)
+
+if __name__ == '__main__':
+	main()

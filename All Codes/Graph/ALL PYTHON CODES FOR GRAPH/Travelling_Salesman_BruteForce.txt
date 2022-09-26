@@ -1,0 +1,48 @@
+# TC -- (O(n-1!))
+
+from itertools import permutations
+
+# returns min distance from src to travel other to src
+# src = int
+# dist == List[List[int]]
+def tsp(src,dist) -> int:
+	min_dist = 2**31 - 1
+	nodes = []
+	for i in range(len(dist)):
+		if(i != src):
+			nodes.append(i)
+	s = set(permutations(nodes))
+	paths = []
+	for arr in s:
+		temp_weight = 0
+		flag = False
+		j = src
+		path = [j]
+		for i in range(len(arr)):
+			temp_weight += dist[j][arr[i]]
+			j = arr[i]
+			flag = True
+			path.append(j)
+		temp_weight += dist[j][src]
+		path.append(src)
+		if(flag):
+			if(min_dist > temp_weight):
+				if(paths):
+					paths.pop(0)
+				paths.append(path.copy())
+			min_dist = min(min_dist, temp_weight)
+	print(paths)
+	return min_dist
+
+
+dist = [
+	[0,20,42,25],
+	[20,0,30,34],
+	[42,30,0,10],
+	[25,34,10,0]
+]
+
+ans = tsp(0,dist)
+
+print(ans)
+

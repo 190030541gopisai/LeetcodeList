@@ -1,0 +1,58 @@
+from collections import defaultdict
+from typing import List
+class Graph:
+	def __init__(self,V):
+		self.V = V
+		self.graph = [[] for i in range(V)]
+	def addEdge(self,u,v):
+		self.graph[u].append(v)
+	def printGraph(self):
+		for i in range(self.V):
+			print(i, end = ":")
+			for j in range(len(self.graph[i])):
+				print(self.graph[i][j],end = " ")
+			print()
+class Solution:
+    
+    #Function to detect cycle in an undirected graph.
+	def isCycleHelper(self,node:int,parent:int,adj:List[List[int]],visited:List[int]):
+		visited[node] = True
+		for nbr in adj[node]:
+			if(not visited[nbr]):
+				check = self.isCycleHelper(nbr,node,adj,visited)
+				if(check == True):
+					return True
+			elif(visited[nbr] == True and parent!=nbr):
+				return True
+		return False
+	def isCycle(self, V, adj):
+		#Code here
+		visited = [False]*V
+		for i in range(V):
+			if(not visited[i]):
+				check = self.isCycleHelper(i,-1,adj,visited)
+				if(check):
+					return True
+		return False
+
+
+def main():
+	V = int(input("Input Number of Vertices = "))
+	E = int(input("Input Number of Edges = "))
+	g = Graph(V)
+	print("========Enter %d Edges========"%E)
+	for _ in range(E):
+		u,v = list(map(int,input().split()))
+		g.addEdge(u,v)
+	g.printGraph()
+	sol = Solution()
+	check = sol.isCycle(V,g.graph)
+	if(check == True):
+		print("Yes Graph is cyclic")
+	else:
+		print("Graph is not cyclic")
+if __name__ == '__main__':
+	main()
+
+
+

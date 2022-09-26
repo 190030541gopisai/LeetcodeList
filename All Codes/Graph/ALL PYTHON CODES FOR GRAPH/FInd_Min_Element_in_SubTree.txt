@@ -1,0 +1,37 @@
+from collections import defaultdict
+
+def subtree_min_generate(u,par,g,dp):
+	dp[u] = u 
+	for v in g[u]:
+		if(v != par):
+			subtree_min_generate(v,u,g,dp)
+			dp[u] = min(dp[u],dp[v])
+
+def main():
+	N = int(input())
+	g = defaultdict(list)
+	for _ in range(N):
+		u,v = list(map(int,input().split()))
+		g[u].append(v)
+		g[v].append(u)
+	dp = defaultdict(int)
+	subtree_min_generate(8,8,g,dp)
+	print("==========================")
+	for key,val in dp.items():
+		print(key,val)
+
+if __name__ == '__main__':
+	main()
+
+#Input 1
+"""
+6
+8 4
+8 5
+4 -1
+4 3
+5 6
+5 -2
+"""
+
+

@@ -1,0 +1,47 @@
+import sys
+class Graph:
+	def __init__(self,V):
+		self.V = V 
+		self.adj = [[] for i in range(V)]
+
+	def addEdge(self,u,v):
+		self.adj[u].append(v)
+		self.adj[v].append(u)
+
+	def single_source_shortest(self,src):
+		# distance is acting as a visited array 
+		distance = [sys.maxsize] * self.V 
+
+		q = [src] 
+		
+		# distnce of src is visitec and distnace is zero
+		distance[src] = 0
+
+		
+		while(q):
+			node = q.pop(0)
+			for nbr in self.adj[node]:
+				if(distance[nbr] == sys.maxsize):
+					distance[nbr] = distance[node] + 1 
+					q.append(nbr)
+
+		for i in range(self.V):
+			print("Node",i,"distance from src",distance[i])
+
+def main():
+	g = Graph(6)
+	g.addEdge(0,1)
+	g.addEdge(0,3)
+	g.addEdge(2,3)
+	g.addEdge(1,2)
+	g.addEdge(3,4)
+	g.addEdge(4,5)
+
+
+	g.single_source_shortest(0)
+
+if __name__ == '__main__':
+	main()
+
+
+

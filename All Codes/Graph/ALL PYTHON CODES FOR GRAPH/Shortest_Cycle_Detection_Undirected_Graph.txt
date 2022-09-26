@@ -1,0 +1,58 @@
+from collections import defaultdict
+from typing import List
+import sys
+class Graph:
+	def __init__(self,V):
+		self.V = V
+		self.graph = [[] for i in range(V)]
+	def addEdge(self,u,v):
+		self.graph[u].append(v)
+	def printGraph(self):
+		for i in range(self.V):
+			print(i, end = ":")
+			for j in range(len(self.graph[i])):
+				print(self.graph[i][j],end = " ")
+			print()
+class Solution:
+	def shortestCycleHelper(self,V,adj,sv,distance)->int:
+		ans = sys.maxsize
+		q = [sv]
+		distance[sv] = 0
+		while(q):
+			u = q.pop(0)
+			for v in adj[u]:
+				if(distance[v] == -1):
+					distance[v] = distance[u] + 1
+					q.append(v)
+				elif(distance[v]>=distance[u]):
+					ans = min(ans, distance[v] + distance[u] + 1)
+		return ans
+
+	def shortestCycle(self,V,adj):
+		ans = sys.maxsize
+		for i in range(V):
+			distance = [-1] * V 
+			ans = min(ans,self.shortestCycleHelper(V,adj,i,distance))
+		if(ans == sys.maxsize):
+			return -1
+		return ans
+
+
+
+def main():
+	V = int(input("Input Number of Vertices = "))
+	E = int(input("Input Number of Edges = "))
+	g = Graph(V)
+	print("========Enter %d Edges========"%E)
+	for _ in range(E):
+		u,v = list(map(int,input().split()))
+		g.addEdge(u,v)
+	g.printGraph()
+	sol = Solution()
+	ans = sol.shortestCycle(V,g.graph)
+	print("ShortestCycle is of Graph is = ",ans)
+if __name__ == '__main__':
+	main()
+
+
+

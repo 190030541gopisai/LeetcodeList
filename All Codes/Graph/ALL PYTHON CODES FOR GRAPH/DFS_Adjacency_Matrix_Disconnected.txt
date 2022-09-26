@@ -1,0 +1,33 @@
+from typing import List
+def dfsUtil(V:int, adjMat:List[List[int]], startVertex:int, visited:List[int], result:List[int])->None:
+    result.append(startVertex)
+    visited[startVertex] = 1
+    for j in range(V):
+        if(adjMat[startVertex][j] == 1):
+            if(not visited[j]):
+                dfsUtil(V,adjMat,j,visited,result)
+def dfs(adjMat,V):
+    visited = [False]*V
+    ans = []
+    for i in range(V):
+        if(not visited[i]):
+            dfsUtil(V,adjMat,i,visited,ans)
+    return ans
+
+
+def main():
+    n = int(input("Enter No of Nodes = "))
+    e = int(input("Enter No of Edges = ")) 
+    mat = [[0]*n for i in range(n)]
+    print("===========Enter the edges in key value pair===========")
+    for i in range(e):
+        first,second = list(map(int,input().split()))
+        #unidirection
+        mat[first][second] = 1
+        #bidirectional
+        mat[second][first] = 1
+    ans_lst = dfs(mat,n)
+    print(*ans_lst)
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,79 @@
+#include<iostream>
+#include<list>
+#include<cstring>
+#include<cmath>
+
+using namespace std;
+
+const int M = ceil(log2(1000001));
+list<int> gr[1000001];
+int up[1000001][20];
+int level[1000001];
+
+
+void binary_lifting(int u,int p){
+	up[u][0] = p;
+	for(int j = 1; j < M; j++){
+		up[u][j] = up[ up[u][j-1] ][ j-1 ];
+	}
+	for(auto v: gr[u]){
+		if( p!=v ){
+			level[v] = level[u] + 1;
+			binary_lifting(v, u);
+		}
+	}
+}
+
+int lca(int u,int v){
+	if(level[u] < level[v]){
+		swap(u,v);
+	}
+	int diff = level[u] - level[v];
+	for(int i = M-1 ; i>=0 ; i--){
+		if(diff >> i){
+			u = up[u][i];
+		}
+	}
+	if(u == v) {
+		return u;
+	}
+
+	for(int i=M-1;i>=0;i--){
+		if(up[u][i] != up[v][i]){
+			u = up[u][i];
+			v = up[v][i];
+		}
+	}
+
+	return up[u][0];
+
+}
+
+int main(){
+	int n; cin>>n;
+	int e; cin>>e;
+	for(int i=0;i<e;i++){
+		int u,v;cin>>u>>v;
+		gr[u].push_back(v);
+		gr[v].push_back(u);
+	}
+
+
+	binary_lifting(1,0);
+
+	int logOfN = ceil(log2(n));
+	// for(int i=0;i<=n;i++){
+	// 	cout << i << " --> ";
+	// 	for(int j=0;j < logOfN;j++){
+	// 		cout << up[i][j] << " ";
+	// 	}
+	// 	cout << endl;
+	// }
+
+	cout << lca(5,9) << endl;
+	cout << lca(3,7) << endl;
+	cout << lca(7,3) << endl;
+  	cout << lca(6,8) << endl;
+
+	return 0;
+}

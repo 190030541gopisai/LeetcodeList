@@ -1,0 +1,71 @@
+from collections import defaultdict
+from typing import List
+class Graph:
+	def __init__(self,V):
+		self.V = V
+		self.graph = [[] for i in range(V)]
+	def addEdge(self,u,v):
+		self.graph[u].append(v)
+	def printGraph(self):
+		for i in range(self.V):
+			print(i, end = ":")
+			for j in range(len(self.graph[i])):
+				print(self.graph[i][j],end = " ")
+			print()
+class Solution:
+	def isBipartiteHelperBFS(self,V,adj,visited,node,par,color)->bool:
+        q = [node]
+        visited[node] = 1
+        while(q):
+            u = q.pop(0)
+            for v in adj[u]:
+                if(not visited[v]):
+                    visited[v] = 3-visited[u]
+                    q.append(v)
+                elif(visited[v] == visited[u]):
+                    return False
+        return True
+	def isBipartiteHelper(self,adj,visited,node,parent,color)->bool:
+		visited[node] = color # color 1 or 2
+		for nbr in adj[node]:
+			if(not visited[nbr]):
+				# 3-2 = 1
+				# 3-1 = 2
+				check = self.isBipartiteHelper(adj,visited,nbr,node,3-color) # 3-color is toggle for color
+				if(check == False):
+					return False
+			elif(nbr!=parent and color == visited[nbr]):
+				return False
+		return True
+	def isBipartite(self, V, adj):
+		visited = [0]*V 
+		for i in range(V):
+			if(not visited[i]):
+				check = self.isBipartiteHelper(adj,visited,i,-1,1)
+				if(check == False):
+					return False
+		return True
+
+
+
+
+def main():
+	V = int(input("Input Number of Vertices = "))
+	E = int(input("Input Number of Edges = "))
+	g = Graph(V)
+	print("========Enter %d Edges========"%E)
+	for _ in range(E):
+		u,v = list(map(int,input().split()))
+		g.addEdge(u,v)
+	g.printGraph()
+	sol = Solution()
+	check = sol.isBipartite(V,g.graph)
+	if(check == True):
+		print("Yes Graph is Bipartite")
+	else:
+		print("Graph is not Bipartite")
+if __name__ == '__main__':
+	main()
+
+
+

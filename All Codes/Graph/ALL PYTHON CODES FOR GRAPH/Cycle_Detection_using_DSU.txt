@@ -1,0 +1,44 @@
+class Graph:
+	def __init__(self,V):
+		self.V = V
+		self.edgeList = []
+	#adding edge list
+	def addEdgeList(self,u,v):
+		self.edgeList.append([u,v])
+	def findSet(self,vertex,parent):
+		if(parent[vertex] == -1):
+			return vertex
+		return self.findSet(parent[vertex],parent)
+	def unionSet(self,u,v,parent):
+		s1 = self.findSet(u,parent)
+		s2 = self.findSet(v,parent)
+		if(s1 != s2):
+			parent[s1] = s2 
+	def contains_cycle(self):
+		parent = [-1]*self.V
+		for u,v in self.edgeList:
+			#finding u in set 1
+			s1 = self.findSet(u,parent)
+			#finding v in set 2
+			s2 = self.findSet(v,parent)
+			
+			# s1 and s2 have cycle in it
+			if(s1 == s2):
+				return True
+			else: # s1 and s2 not belongs to same set
+				# so we union them
+				self.unionSet(s1,s2,parent)
+		return False
+
+def main():
+	N = int(input())
+	g = Graph(N)
+	E = int(input())
+	for _ in range(E):
+		u,v = list(map(int,input().split()))
+		g.addEdgeList(u,v)
+	ans = g.contains_cycle()
+	print(ans)
+
+if __name__ == '__main__':
+	main()

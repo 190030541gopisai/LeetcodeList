@@ -1,0 +1,132 @@
+//{ Driver Code Starts
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+vector<int> minimumCut(vector<vector<int>> &A, int S, int T, int N);
+
+int main() {
+
+    int T;
+    cin >> T;
+    while (T--) {
+        int N;
+        cin >> N;
+        vector<vector<int>> A(N,vector<int> (N));
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                cin >> A[i][j];
+            }
+        }
+        int S, T;
+        cin >> S >> T;
+        vector<int> res = minimumCut(A, S, T, N);
+        for(int i = 0; i < res.size(); i++){
+            cout << res[i] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+// } Driver Code Ends
+
+
+
+bool bfs(int S, int T, vector<vector<int>> &rGraph, vector<int> &parent, int N){
+
+	bool visited[N];
+	memset(visited, false, sizeof(visited));
+	queue<int> q;
+
+	visited[S] = true;
+	q.push(S);
+	parent[S] = S;
+
+	bool foundAugmentedPath = false;
+
+	while(!q.empty() && !foundAugmentedPath){
+		int u = q.front();
+		q.pop();
+
+		for(int v = 0; v < N; v++){
+			if(!visited[v] && rGraph[u][v] > 0){
+
+				visited[v] = true;
+				parent[v] = u;
+				q.push(v);
+
+				if(v == T){
+					foundAugmentedPath = true;
+					break;
+				}
+
+			}
+		}
+	}
+
+	return foundAugmentedPath;
+
+}
+
+void dfs(int cur, int par, vector<vector<int> > &rGraph, bool *visited, int N){
+	visited[cur] = true;
+	for(int child = 0; child < N; child++){
+		if(!visited[child] && rGraph[cur][child] > 0){
+			dfs(child, cur, rGraph, visited, N);
+		}
+	}
+}
+
+vector<int> minimumCut(vector<vector<int>> &A, int S, int T, int N){
+    // code here
+    
+	vector<vector<int>> rGraph(N, vector<int> (N, 0));
+	for(int i = 0; i < N; i++){
+		for(int j = 0; j < N; j++){
+			rGraph[i][j] = A[i][j];
+		}
+	}
+
+	vector<int> parent(N, 0);
+
+	while(bfs(S, T, rGraph, parent, N)){
+
+		int flow = INT_MAX;
+		int u,v = T;
+		while(v != S){
+			u = parent[v];
+			flow = min(flow, rGraph[u][v]);
+			v = u;
+		}
+
+		v = T;
+		while(v != S){
+			u = parent[v];
+			rGraph[u][v] -= flow;
+			rGraph[v][u] += flow;
+			v = u;
+		}
+	}
+
+
+	bool visited[N];
+	memset(visited, false, sizeof(visited));
+	dfs(S, S, rGraph, visited, N);
+
+	vector<int> ans;
+
+	for(int i = 0; i < N; i++){
+		for(int j = 0; j < N; j++){
+			if(visited[i] && !visited[j] && A[i][j] > 0 && rGraph[i][j] == 0){
+				ans.push_back(i);
+				ans.push_back(j);
+			}
+		}
+	}
+
+	if(ans.size() == 0){
+		ans.push_back(-1);
+	}
+	return ans;
+}

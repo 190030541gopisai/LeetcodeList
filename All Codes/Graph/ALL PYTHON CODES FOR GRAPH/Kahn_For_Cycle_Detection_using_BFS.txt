@@ -1,0 +1,41 @@
+from typing import List
+
+def kahnAlgoBFS(V:int,adj:List[List[int]])->int:
+	indgre = [0]*V 
+	for i in range(V):
+		for nbr in adj[i]:
+			indgre[nbr] += 1
+	q = []
+	for i in range(V):
+		if(indgre[i] == 0):
+			q.append(i)
+	# to count unique nodes 
+	cnt = 0
+	while(q):
+		u = q.pop()
+		cnt += 1
+		for nbr in adj[u]:
+			indgre[nbr] -= 1
+			if(indgre[nbr] == 0):
+				q.append(nbr)
+	# unique count of nodes no loops or cycle
+	if(cnt == V):
+		return False
+	return True # cnt != V there is a cycle detected
+
+
+def isCycle(V:int,adj:List[List[int]]) -> bool:
+	ans = kahnAlgoBFS(V,adj)
+	return ans
+
+def main():
+	N = int(input())
+	adj = [[] for _ in range(N)]
+	E = int(input())
+	for _ in range(E):
+		u,v = list(map(int,input().split()))
+		adj[u].append(v)
+	ans = isCycle(N,adj)
+	print(ans)
+if __name__ == '__main__':
+	main()

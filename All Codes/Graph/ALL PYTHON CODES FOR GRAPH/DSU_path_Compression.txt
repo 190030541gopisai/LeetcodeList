@@ -1,0 +1,64 @@
+class Graph:
+	def __init__(self,V):
+		self.V = V 
+		self.edgeList = []
+	def addEdgeAsList(self,u,v):
+		self.edgeList.append((u,v))
+# -------------------------------------------
+
+
+#-----------------------------
+def findSet(node,parent):
+	if(parent[node] == -1):
+		return node
+	# path compression line
+	parent[node] = findSet(parent[node],parent)
+	return parent[node] # we return path compressed parent
+
+def unionSet(u,v,parent,rank):
+	s1 = findSet(u,parent)
+	s2 = findSet(v,parent)
+
+	#rank optimization
+	if(rank[s1] < rank[s2]):
+		parent[s1] = s2
+		# no need to increment rank since the rank[s2] is large 
+	elif(rank[s2] < rank[s1]):
+		parent[s2] = s1
+		# no need to increment rank since the rank[s1] is large 
+	else:
+		# any thing we can keep as parent
+		parent[s1] = s2
+		# update the rank of s1 since it is the parent
+		rank[s2] += 1
+	# print(parent,rank)
+
+
+def main():
+	N = int(input())
+	parent = [-1] * N # used in union 
+	rank = [0] * N # rank optimization purpose
+	E = int(input())
+	for _ in range(E):
+		u,v = list(map(int,input().split()))
+		# find set of u
+		s1 = findSet(u,parent)
+		s2 = findSet(v,parent)
+
+		# not belong to same set 
+		if(s1 != s2):
+			print("Different set",u,v)
+			unionSet(s1,s2,parent,rank)
+		else:
+			print("u =",u,"v =",v,"Belongs to same Set -->",s1,rank)
+if __name__ == '__main__':
+	main()
+
+	
+
+
+
+
+
+
+

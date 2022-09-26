@@ -1,0 +1,35 @@
+# TC -- O((2^N) * N) Dp array
+import sys
+def tsp(mask, pos, dist, N, dp, VISITED_ALL) -> int:
+    if(mask == VISITED_ALL):
+        return dist[pos][0]
+    if(dp[mask][pos]!=-1):
+        return dp[mask][pos]
+    mn_ans = sys.maxsize
+    for city in range(N):
+        # not visited
+        if( mask & (1<<city) == 0):
+            newAns = dist[pos][city] + tsp(mask | (1<<city), city, dist,N,dp,VISITED_ALL)
+            mn_ans = min(newAns,mn_ans)
+            
+    dp[mask][pos] = mn_ans
+    return dp[mask][pos]
+        
+def shortestRoute(distance):
+    # Write your code here.
+    N = len(distance)
+    dp = [[-1] * N for i in range(1<<N)]
+    VISITED_ALL = (1<<N) - 1
+    return tsp(1, 0, distance, N, dp, VISITED_ALL)
+    
+
+
+dist = [
+	[0,20,42,25],
+	[20,0,30,34],
+	[42,30,0,10],
+	[25,34,10,0]
+]
+
+ans = shortestRoute(dist)
+print(ans)

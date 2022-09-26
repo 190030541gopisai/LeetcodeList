@@ -1,0 +1,41 @@
+from collections import defaultdict
+
+class Graph:
+	def __init__(self,V):
+		self.V = V 
+		self.graph = defaultdict(list)
+	def addEdge(self,u,v):
+		self.graph[u].append(v)
+	def topoSort(self):
+		# count indegree count
+		result = []
+		indgre = [0]*self.V 
+		for u in range(self.V): 
+			for nbr in self.graph[u]:
+				indgre[nbr] += 1
+		q = []
+		for u in range(self.V):
+			if(indgre[u] == 0):
+				q.append(u)
+		while(q):
+			u = q.pop()
+			result.append(u)
+			for nbr in self.graph[u]:
+				indgre[nbr]-=1
+				if(indgre[nbr] == 0):
+					q.append(nbr)
+		print(result)
+
+
+
+def main():
+	N = int(input("enter nodes = "))
+	E = int(input("enter edges = "))
+	g = Graph(N)
+	for _ in range(E):
+		u,v = list(map(int,input("u,v = ").split()))
+		g.addEdge(u,v)
+	g.topoSort()
+
+if __name__ == '__main__':
+	main()

@@ -1,0 +1,49 @@
+from sortedcontainers import SortedDict,SortedSet,SortedList
+from collections import defaultdict
+
+def main():
+	no_of_transactions = int(input())
+	friends = int(input())
+
+	net = defaultdict(int)
+	for _ in range(no_of_transactions):
+		name1,name2,cost = list(map(str,input().split()))
+		cost = int(cost)
+		net[name1] -= cost 
+		net[name2] += cost
+
+	lst = SortedList()
+	for key,val in net.items():
+		if(val != 0):
+			lst.add((val,key))
+
+	while(lst):
+		debitAmount,name1 = lst.pop(0)
+		creditAmount,name2 = lst.pop(-1)
+
+		settle_amount = min(-debitAmount,creditAmount)
+
+		debitAmount += settle_amount
+		creditAmount -= settle_amount
+
+		print(name1,"gives to ",name2, "amount = ",settle_amount)
+
+		if(debitAmount != 0):
+			lst.add((debitAmount,name1))
+		
+		if(creditAmount !=0):
+			lst.add((creditAmount,name2))
+
+
+
+if __name__ == '__main__':
+	main()
+
+"""
+3                                                            
+3                                                            
+Rahul Ajay 100                                               
+Ajay Neha 50                                                 
+Neha Rahul 40
+
+"""

@@ -1,0 +1,44 @@
+# All source shortest path algorithm
+from math import inf
+
+class Graph:
+	def __init__(self,V):
+		self.V = V 
+		self.adjMat = [[inf] * V for i in range(V)]
+	def addEdge(self,u,v,w):
+		self.adjMat[u][v] = w 
+	def floyd_warshall(self):
+
+		distance = [[inf]*self.V for i in range(self.V)]
+		for i in range(self.V):
+			distance[i][i] = 0 
+			for j in range(self.V):
+				if(self.adjMat[i][j] != inf):
+					distance[i][j] = self.adjMat[i][j]
+		for k in range(self.V):
+			for i in range(self.V):
+				for j in range(self.V):
+					if( distance[i][k] + distance[k][j] < distance[i][j] ):
+						distance[i][j] = distance[i][k] + distance[k][j]
+
+		print("====================================")
+		for i in range(self.V):
+			for j in range(self.V):
+				print(distance[i][j],end = " ")
+			print()
+
+def main():
+	g = Graph(4)
+	g.addEdge(1,0,4)
+	g.addEdge(0,2,-2)
+	g.addEdge(1,2,3)
+	g.addEdge(2,3,2)
+	g.addEdge(3,1,-1)
+
+	g.floyd_warshall()
+if __name__ == '__main__':
+	main()
+
+
+
+
