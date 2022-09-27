@@ -3,6 +3,8 @@ This repository contains the list with topic wise problems list
 
 
 # [Two Pointers](https://leetcode.com/tag/two-pointers/)
+###### ``Basic``
+- [838. Push Dominoes](https://leetcode.com/problems/push-dominoes/)
 ###### ``Two sum Variants`` 
 - [15. 3Sum](https://leetcode.com/problems/3sum)  
 - [16. 3Sum Closest](https://leetcode.com/problems/3sum-closest/) 
@@ -60,6 +62,7 @@ This repository contains the list with topic wise problems list
 # [Dynamic Programming](https://leetcode.com/tag/dynamic-programming/)
 ###### ``Prefix Sum DP``
 - [2420. Find All Good Indices](https://leetcode.com/problems/find-all-good-indices/)
+- [838. Push Dominoes](https://leetcode.com/problems/push-dominoes/)
 ###### ``DP + String``
 - [718. Maximum Length of Repeated Subarray (Longest Common Substring)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
 - [516. Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)
