@@ -5,6 +5,7 @@ This repository contains the list with topic wise problems list
 # [Two Pointers](https://leetcode.com/tag/two-pointers/)
 ###### ``Basic``
 - [838. Push Dominoes](https://leetcode.com/problems/push-dominoes/)
+- [611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)
 ###### ``Two sum Variants`` 
 - [15. 3Sum](https://leetcode.com/problems/3sum)  
 - [16. 3Sum Closest](https://leetcode.com/problems/3sum-closest/) 
