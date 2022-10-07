@@ -75,6 +75,7 @@ This repository contains the list with topic wise problems list
 - [1770. Maximum Score from Performing Multiplication Operations](https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations/)
 ###### ``Partition Dp``
 - [1043. Partition Array for Maximum Sum](https://leetcode.com/problems/partition-array-for-maximum-sum/)
+- [131. Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
 
 # [Graph](https://leetcode.com/tag/graph/)
 #### ``Union Find``
