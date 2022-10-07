@@ -76,6 +76,7 @@ This repository contains the list with topic wise problems list
 ###### ``Partition Dp``
 - [1043. Partition Array for Maximum Sum](https://leetcode.com/problems/partition-array-for-maximum-sum/)
 - [131. Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
+- [132. Palindrome Partitioning II](https://leetcode.com/problems/palindrome-partitioning-ii/)
 
 # [Graph](https://leetcode.com/tag/graph/)
 #### ``Union Find``
