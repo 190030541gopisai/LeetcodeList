@@ -73,6 +73,8 @@ This repository contains the list with topic wise problems list
 - [1687. Delivering Boxes from Storage to Ports](https://leetcode.com/problems/delivering-boxes-from-storage-to-ports/) (Hard)
 ###### ``2D - DP``
 - [1770. Maximum Score from Performing Multiplication Operations](https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations/)
+###### ``Partition Dp``
+- [1043. Partition Array for Maximum Sum](https://leetcode.com/problems/partition-array-for-maximum-sum/)
 
 # [Graph](https://leetcode.com/tag/graph/)
 #### ``Union Find``
