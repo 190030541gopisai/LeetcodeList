@@ -77,6 +77,7 @@ This repository contains the list with topic wise problems list
 - [1043. Partition Array for Maximum Sum](https://leetcode.com/problems/partition-array-for-maximum-sum/)
 - [131. Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
 - [132. Palindrome Partitioning II](https://leetcode.com/problems/palindrome-partitioning-ii/)
+- [1547. Minimum Cost to Cut a Stick](https://leetcode.com/problems/minimum-cost-to-cut-a-stick/)
 
 # [Graph](https://leetcode.com/tag/graph/)
 #### ``Union Find``
