@@ -62,6 +62,8 @@ This repository contains the list with topic wise problems list
 - [2007. Find Original Array From Doubled Array](https://leetcode.com/problems/find-original-array-from-doubled-array/)
 
 # [Dynamic Programming](https://leetcode.com/tag/dynamic-programming/)
+###### ``1D - DP``
+- [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 ###### ``Prefix Sum DP``
 - [2420. Find All Good Indices](https://leetcode.com/problems/find-all-good-indices/)
 - [838. Push Dominoes](https://leetcode.com/problems/push-dominoes/)
