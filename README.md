@@ -30,6 +30,7 @@ This repository contains the list with topic wise problems list
 - [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) (Easy)
 - [142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) (Medium) 
 ###### ``Two Pointers + Sliding Window``
+- [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 - [1234. Replace the Substring for Balanced String](https://leetcode.com/problems/replace-the-substring-for-balanced-string/) (Medium)
 - [713. Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) (Medium)
 - [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) (Medium)
