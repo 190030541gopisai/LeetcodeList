@@ -23,7 +23,7 @@ This repository contains the list with topic wise problems list
 - [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) (Easy)
 - [80. Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) (Medium)
 ###### ``Two Pointers - Containers``
-- [11. Container With Most Water](https://leetcode.com/problems/sort-colors/)  (Medium) 
+- [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water/)  (Medium) 
 - [42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) (Hard) 
 ###### ``Two Pointers - Linked List``
 - [234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) (Easy)
