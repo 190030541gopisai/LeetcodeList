@@ -60,6 +60,11 @@ This repository contains the list with topic wise problems list
 ###### ``Binary Tree - Path``
 - [1457. Pseudo-Palindromic Paths in a Binary Tree](https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/) (Medium)
 
+# [Divide and Conquer](https://leetcode.com/tag/divide-and-conquer/)
+###### ``Basic``
+- [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+
+
 # [Greedy](https://leetcode.com/tag/greedy/)
 ###### ``Basic``
 - [1798. Maximum Number of Consecutive Values You Can Make](https://leetcode.com/problems/maximum-number-of-consecutive-values-you-can-make/)
