@@ -68,6 +68,7 @@ This repository contains the list with topic wise problems list
 - [2420. Find All Good Indices](https://leetcode.com/problems/find-all-good-indices/)
 - [838. Push Dominoes](https://leetcode.com/problems/push-dominoes/)
 ###### ``DP + String``
+- [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
 - [718. Maximum Length of Repeated Subarray (Longest Common Substring)](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
 - [516. Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)
 - [1048. Longest String Chain (Longest Increasing Subsequence)](https://leetcode.com/problems/longest-string-chain/)
