@@ -36,6 +36,11 @@ This repository contains the list with topic wise problems list
 - [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) (Medium)
 - [30. Substring with Concatenation of All Words]() (Hard)
 
+# [BinarySearch](https://leetcode.com/tag/binary-search/)
+###### ``Basic``
+- [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
+
+
 # [LinkedList](https://leetcode.com/tag/linked-list/)
 ###### ``Basic``
 - [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
