@@ -40,6 +40,9 @@ This repository contains the list with topic wise problems list
 ###### ``Basic``
 - [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 
+# [Hash Table](https://leetcode.com/tag/hash-table/)
+###### ``Basic``
+- [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/)
 
 # [LinkedList](https://leetcode.com/tag/linked-list/)
 ###### ``Basic``
