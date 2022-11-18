@@ -35,6 +35,7 @@ This repository contains the list with topic wise problems list
 - [713. Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) (Medium)
 - [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) (Medium)
 - [30. Substring with Concatenation of All Words]() (Hard)
+- [220. Contains Duplicate III (Sliding window + SortedSet + bucketSort)](https://leetcode.com/problems/contains-duplicate-iii/) 
 
 # [BinarySearch](https://leetcode.com/tag/binary-search/)
 ###### ``Basic``
@@ -43,6 +44,8 @@ This repository contains the list with topic wise problems list
 # [Hash Table](https://leetcode.com/tag/hash-table/)
 ###### ``Basic``
 - [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+
+
 
 # [LinkedList](https://leetcode.com/tag/linked-list/)
 ###### ``Basic``
