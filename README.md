@@ -71,6 +71,10 @@ This repository contains the list with topic wise problems list
 ###### ``Binary Tree - Path``
 - [1457. Pseudo-Palindromic Paths in a Binary Tree](https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/) (Medium)
 
+# [Binary Search Tree](https://leetcode.com/tag/binary-search-tree/)
+###### ``Basic``
+- [95. Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/)
+
 # [Divide and Conquer](https://leetcode.com/tag/divide-and-conquer/)
 ###### ``Basic``
 - [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
