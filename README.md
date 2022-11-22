@@ -106,6 +106,8 @@ This repository contains the list with topic wise problems list
 - [131. Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
 - [132. Palindrome Partitioning II](https://leetcode.com/problems/palindrome-partitioning-ii/)
 - [1547. Minimum Cost to Cut a Stick](https://leetcode.com/problems/minimum-cost-to-cut-a-stick/)
+###### ``DP + Tree``
+- [Unique Binary Search Trees II](https://www.interviewbit.com/problems/unique-binary-search-trees-ii/)
 
 # [Graph](https://leetcode.com/tag/graph/)
 #### ``Union Find``
