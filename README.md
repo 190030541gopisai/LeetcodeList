@@ -59,6 +59,7 @@ This repository contains the list with topic wise problems list
 ###### ``Basic``
 - [Nearest Smaller Element](https://www.interviewbit.com/problems/nearest-smaller-element/) 
 - [84. Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
+- [32. Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)
 
 # [Bit Manipulation](https://leetcode.com/tag/bit-manipulation/)
 ###### ``Basic``
