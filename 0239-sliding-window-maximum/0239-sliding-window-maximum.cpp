@@ -1,3 +1,5 @@
+// TC = O(N + k)
+// SC = O(k)
 class Solution {
 public:
     vector<int> maxSlidingWindow(vector<int>& nums, int k) {
