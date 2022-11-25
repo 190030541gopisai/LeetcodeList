@@ -1,34 +1,99 @@
-// TC = O(N)
-// SC = O(N)
-class Solution {
-public:
-    int longestValidParentheses(string s) {
-        int n = s.length();
-        int ans = 0;
-        stack<int> stk;
-        stk.push(-1);
-        
-        for(int i = 0; i < n; i++){
-            if(s[i] == '('){
-                stk.push(i);
-            }else{
-                stk.pop();
-                if(stk.empty()){
-                    stk.push(i);
-                }else{
-                    ans = max(ans, i - stk.top());
+// TC = O(N) + O(N)
+// SC = O(1)
+class Solution
+{
+
+    public:
+        int longestValidParentheses(string s)
+        {
+            int n = s.length();
+
+            int open = 0, close = 0, ans = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                if (s[i] == '(')
+                {
+                    open++;
+                }
+                else
+                {
+                    close++;
+                }
+
+                if (close > open)
+                {
+                    open = close = 0;
+                }
+
+                if (open == close)
+                {
+                    ans = max(ans, open + close);
                 }
             }
+
+           	// right to left
+            open = 0;
+            close = 0;
+            for (int i = n - 1; i >= 0; i--)
+            {
+                if (s[i] == '(')
+                {
+                    open++;
+                }
+                else
+                {
+                    close++;
+                }
+
+                if (close < open)
+                {
+                    open = close = 0;
+                }
+
+                if (open == close)
+                {
+                    ans = max(ans, open + close);
+                }
+            }
+
+            return ans;
         }
-        
-        return ans;
-    }
 };
 
+// =================================================================================
 
+//	// TC = O(N)
+//	// SC = O(N)
+// class Solution {
+// public:
+//     int longestValidParentheses(string s) {
+//         int n = s.length();
+//         int ans = 0;
+//         stack<int> stk;
+//         stk.push(-1);
 
-// // TC = O(N)
-// // SC = O(N)
+//         for(int i = 0; i < n; i++){
+//             if(s[i] == '('){
+//                 stk.push(i);
+//             }else{
+//                 stk.pop();
+//                 if(stk.empty()){
+//                     stk.push(i);
+//                 }else{
+//                     ans = max(ans, i - stk.top());
+//                 }
+//             }
+//         }
+
+//         return ans;
+//     }
+// };
+
+// ===================================================================================
+
+//	// TC = O(N)
+//	// SC = O(N)
 // class Solution
 // {
 //     public:
@@ -72,7 +137,6 @@ public:
 //             return ans;
 //         }
 // };
-
 
 // ===============================================================================
 
