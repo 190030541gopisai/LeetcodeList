@@ -1,48 +1,80 @@
 // TC = O(N)
 // SC = O(N)
-class Solution
-{
-    public:
-        int longestValidParentheses(string s)
-        {
-            int n = s.length();
-            vector<int> dp(n, 0);
-            int ans = 0;
-            for (int i = 1; i < n; i++)
-            {
-                if (s[i] == ')')
-                {
-                    int prevIndex = i - 1;
-                    int leftMostIndex = i - dp[prevIndex] - 1;
-
-                    if (prevIndex >= 0 && s[prevIndex] == '(')
-                    {
-                        dp[i] = 2;
-                        if (i >= 2)
-                        {
-                            dp[i] += dp[i - 2];
-                        }
-                    }
-                    else if (leftMostIndex >= 0 && s[leftMostIndex] == '(')
-                    {
-                        dp[i] = 2;
-                        if (prevIndex >= 0)
-                        {
-                            dp[i] += dp[prevIndex];
-                        }
-                        if (leftMostIndex >= 1)
-                        {
-                            dp[i] += dp[leftMostIndex - 1];
-                        }
-                    }
-
-                    ans = max(ans, dp[i]);
+class Solution {
+public:
+    int longestValidParentheses(string s) {
+        int n = s.length();
+        int ans = 0;
+        stack<int> stk;
+        stk.push(-1);
+        
+        for(int i = 0; i < n; i++){
+            if(s[i] == '('){
+                stk.push(i);
+            }else{
+                stk.pop();
+                if(stk.empty()){
+                    stk.push(i);
+                }else{
+                    ans = max(ans, i - stk.top());
                 }
             }
-
-            return ans;
         }
+        
+        return ans;
+    }
 };
+
+
+
+// // TC = O(N)
+// // SC = O(N)
+// class Solution
+// {
+//     public:
+//         int longestValidParentheses(string s)
+//         {
+//             int n = s.length();
+//             vector<int> dp(n, 0);
+//             int ans = 0;
+//             for (int i = 1; i < n; i++)
+//             {
+//                 if (s[i] == ')')
+//                 {
+//                     int prevIndex = i - 1;
+//                     int leftMostIndex = i - dp[prevIndex] - 1;
+
+//                     if (prevIndex >= 0 && s[prevIndex] == '(')
+//                     {
+//                         dp[i] = 2;
+//                         if (i >= 2)
+//                         {
+//                             dp[i] += dp[i - 2];
+//                         }
+//                     }
+//                     else if (leftMostIndex >= 0 && s[leftMostIndex] == '(')
+//                     {
+//                         dp[i] = 2;
+//                         if (prevIndex >= 0)
+//                         {
+//                             dp[i] += dp[prevIndex];
+//                         }
+//                         if (leftMostIndex >= 1)
+//                         {
+//                             dp[i] += dp[leftMostIndex - 1];
+//                         }
+//                     }
+
+//                     ans = max(ans, dp[i]);
+//                 }
+//             }
+
+//             return ans;
+//         }
+// };
+
+
+// ===============================================================================
 
 //	//  TC = O(N^2)
 //	//  SC = O(1)
