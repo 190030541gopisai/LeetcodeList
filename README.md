@@ -3,7 +3,6 @@ This repository contains the list with topic wise problems list
 
 
 # [Two Pointers](https://leetcode.com/tag/two-pointers/)
-###### ``Basic``
 - [838. Push Dominoes](https://leetcode.com/problems/push-dominoes/)
 - [611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)
 ###### ``Two sum Variants`` 
@@ -38,17 +37,14 @@ This repository contains the list with topic wise problems list
 - [220. Contains Duplicate III (Sliding window + SortedSet + bucketSort)](https://leetcode.com/problems/contains-duplicate-iii/) 
 
 # [BinarySearch](https://leetcode.com/tag/binary-search/)
-###### ``Basic``
 - [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 
 # [Hash Table](https://leetcode.com/tag/hash-table/)
-###### ``Basic``
 - [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/)
 
 
 
 # [LinkedList](https://leetcode.com/tag/linked-list/)
-###### ``Basic``
 - [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
 
 # [String](https://leetcode.com/tag/string/)
@@ -56,13 +52,14 @@ This repository contains the list with topic wise problems list
 - [1392. Longest Happy Prefix ( KMP & Rolling Hash)](https://leetcode.com/problems/longest-happy-prefix/)
 
 # [Stack](https://leetcode.com/tag/stack/)
-###### ``Basic``
 - [Nearest Smaller Element](https://www.interviewbit.com/problems/nearest-smaller-element/) 
 - [84. Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
 - [32. Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)
 
+# [Deque]()
+- [239. Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
+
 # [Bit Manipulation](https://leetcode.com/tag/bit-manipulation/)
-###### ``Basic``
 - [1680. Concatenation of Consecutive Binary Numbers](https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/)
 
 
@@ -73,16 +70,13 @@ This repository contains the list with topic wise problems list
 - [1457. Pseudo-Palindromic Paths in a Binary Tree](https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/) (Medium)
 
 # [Binary Search Tree](https://leetcode.com/tag/binary-search-tree/)
-###### ``Basic``
 - [95. Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/)
 
 # [Divide and Conquer](https://leetcode.com/tag/divide-and-conquer/)
-###### ``Basic``
 - [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 
 
 # [Greedy](https://leetcode.com/tag/greedy/)
-###### ``Basic``
 - [1798. Maximum Number of Consecutive Values You Can Make](https://leetcode.com/problems/maximum-number-of-consecutive-values-you-can-make/)
 - [2007. Find Original Array From Doubled Array](https://leetcode.com/problems/find-original-array-from-doubled-array/)
 
@@ -115,6 +109,5 @@ This repository contains the list with topic wise problems list
 - [990. Satisfiability of Equality Equations](https://leetcode.com/problems/satisfiability-of-equality-equations/)
 
 # [Trie](https://leetcode.com/tag/trie/)
-###### ``Basic``
 - [208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
 
