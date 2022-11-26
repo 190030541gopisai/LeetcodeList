@@ -59,6 +59,9 @@ This repository contains the list with topic wise problems list
 # [Deque]()
 - [239. Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
 
+# [Backtracking](https://leetcode.com/tag/backtracking/)
+- [37. Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)
+
 # [BFS](https://leetcode.com/tag/breadth-first-search/)
 - [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
 
