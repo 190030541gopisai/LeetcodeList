@@ -47,6 +47,7 @@ This repository contains the list with topic wise problems list
 
 # [LinkedList](https://leetcode.com/tag/linked-list/)
 - [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
+- [61. Rotate List](https://leetcode.com/problems/rotate-list/)
 
 # [String](https://leetcode.com/tag/string/)
 ###### ``String Matching``
