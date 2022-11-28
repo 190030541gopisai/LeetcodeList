@@ -118,4 +118,4 @@ This repository contains the list with topic wise problems list
 
 # [Trie](https://leetcode.com/tag/trie/)
 - [208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
-
+- [1804. Implement Trie II (Prefix Tree)](https://www.codingninjas.com/codestudio/problems/implement-trie_1387095)
