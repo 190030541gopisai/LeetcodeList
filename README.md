@@ -91,6 +91,7 @@ This repository contains the list with topic wise problems list
 # [Dynamic Programming](https://leetcode.com/tag/dynamic-programming/)
 ###### ``1D - DP``
 - [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+- [264. Ugly Number II](https://leetcode.com/problems/ugly-number-ii/)
 ###### ``Prefix Sum DP``
 - [2420. Find All Good Indices](https://leetcode.com/problems/find-all-good-indices/)
 - [838. Push Dominoes](https://leetcode.com/problems/push-dominoes/)
