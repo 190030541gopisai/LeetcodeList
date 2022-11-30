@@ -69,6 +69,7 @@ This repository contains the list with topic wise problems list
 
 # [Bit Manipulation](https://leetcode.com/tag/bit-manipulation/)
 - [1680. Concatenation of Consecutive Binary Numbers](https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/)
+- [137. Single Number II](https://leetcode.com/submissions/detail/852392505/)
 
 
 # [Binary Tree](https://leetcode.com/tag/binary-tree/)
