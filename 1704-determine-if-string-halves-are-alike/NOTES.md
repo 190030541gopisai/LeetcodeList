@@ -1,0 +1,9 @@
+https://www.geeksforgeeks.org/scope-resolution-operator-in-c/
+​
+https://www.geeksforgeeks.org/conversion-whole-string-uppercase-lowercase-using-stl-c/
+​
+https://www.geeksforgeeks.org/transform-c-stl-perform-operation-elements/
+​
+https://www.youtube.com/watch?v=ChxMbIXQXO0
+​
+​
