@@ -1,3 +1,29 @@
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+
+using namespace __gnu_pbds;
+
+template <class T> using ordered_set =  tree<T, null_type, less<T>, rb_tree_tag,
+										tree_order_statistics_node_update>;
+
+class Solution {
+public:
+    vector<int> countSmaller(vector<int>& nums) {
+        ordered_set<pair<int, int>> s;
+        int N = nums.size();
+        vector<int> counts(N, 0);
+        for(int i = N-1; i>=0; i--){
+            counts[i] = s.order_of_key({nums[i], i});
+            s.insert({nums[i], i});
+        }
+        return counts;
+    }
+};
+
+/*
+// Using Mergesort
+// TC = O(NlogN)
+// SC = O(N) for merge sort
 class Solution {
     void merge(int low1, int high1, int low2, int high2, vector<pair<int, int>> &arr, vector<int> &count){
         int i = low1, j = low2, k = 0;
@@ -45,3 +71,4 @@ public:
         return count;
     }
 };
+*/
