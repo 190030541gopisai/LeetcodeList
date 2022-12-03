@@ -47,6 +47,7 @@ This repository contains the list with topic wise problems list
 
 # [LinkedList](https://leetcode.com/tag/linked-list/)
 - [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
+- [61. Rotate List](https://leetcode.com/problems/rotate-list/)
 
 # [String](https://leetcode.com/tag/string/)
 ###### ``String Matching``
@@ -68,6 +69,7 @@ This repository contains the list with topic wise problems list
 
 # [Bit Manipulation](https://leetcode.com/tag/bit-manipulation/)
 - [1680. Concatenation of Consecutive Binary Numbers](https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/)
+- [137. Single Number II](https://leetcode.com/submissions/detail/852392505/)
 
 
 # [Binary Tree](https://leetcode.com/tag/binary-tree/)
@@ -90,6 +92,7 @@ This repository contains the list with topic wise problems list
 # [Dynamic Programming](https://leetcode.com/tag/dynamic-programming/)
 ###### ``1D - DP``
 - [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+- [264. Ugly Number II](https://leetcode.com/problems/ugly-number-ii/)
 ###### ``Prefix Sum DP``
 - [2420. Find All Good Indices](https://leetcode.com/problems/find-all-good-indices/)
 - [838. Push Dominoes](https://leetcode.com/problems/push-dominoes/)
