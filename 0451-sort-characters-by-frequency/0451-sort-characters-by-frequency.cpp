@@ -1,3 +1,20 @@
+class Solution {
+    
+public:
+    string frequencySort(string s) {
+        int count[256] = {0};
+        for(char ch: s){
+            count[ch]++;
+        }
+        sort(s.begin(), s.end(), [&](char a, char b) -> bool{
+            return (count[a] > count[b]) || (count[a] == count[b] && a < b);
+        });
+        return s;
+    }
+};
+
+/*
+
 
 class Solution {
     static bool cmp(pair<int, char> &a, pair<int, char> &b){
@@ -25,3 +42,4 @@ public:
         return ans;
     }
 };
+*/
