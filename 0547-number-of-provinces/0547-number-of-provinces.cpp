@@ -44,7 +44,7 @@ public:
                     int s1 = uf.findSet(i);
                     int s2 = uf.findSet(j);
                     if(s1!=s2){
-                        uf.unionSet(i, j);
+                        uf.unionSet(s1, s2);
                         count_provinces--;
                     } 
                 }
